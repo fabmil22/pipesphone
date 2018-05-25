@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { AddpresupuestosComponent } from './presupuesto/addpresupuestos/addpresupuestos.component';
+import { PhonePipe } from './pipes/phone.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddpresupuestosComponent
+    AddpresupuestosComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
@@ -18,6 +20,7 @@ import { AddpresupuestosComponent } from './presupuesto/addpresupuestos/addpresu
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [PhonePipe]
 })
 export class AppModule { }
